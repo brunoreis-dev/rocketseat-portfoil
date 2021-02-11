@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <title>Bruno Reis</title>
+    {% block head %}
+      
+    {% endblock %}
+  </head>
+  <body>
+    <header>
+      <nav class="links">
+        <a href="/">Sobre</a>
+        <a href="/portfolio">Aulas</a>
+        <a href="/conteudos">Conteúdos</a>
+      </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+  </body>
+</html>
