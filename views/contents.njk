@@ -1,0 +1,32 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+  <title>Blog - Bruno Reis</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="/style.css" media="screen" />
+{% endblock %}
+
+{% block content %}
+
+  <section id="wrapper">
+    <h1>Conteúdos</h1>
+  </section>
+  <section class="posts">
+     {% for item in items %}
+      <a class="posts__card" id="{{item.id}}">
+        <div class="posts__img-container">
+          <img class="posts__img" src="https://blog.rocketseat.com.br/content/images/{{item.image}}" alt="{{item.title}}" />
+        </div>
+        <div class="posts__content">
+          <h2 class="posts__title">{{item.title}}</h2>
+        </div>
+        <div class="posts__infos">
+          <p class="posts__author">Autor: <span>{{item.author}}</span></p>
+          <p class="posts__time"><i class="material-icons posts__icon">alarm</i> {{item.time}} min de leitura</p>
+        </div>
+      </a>
+    {% endfor %}
+  </section>
+  <script src="/contents.js"></script>
+  
+{% endblock %}

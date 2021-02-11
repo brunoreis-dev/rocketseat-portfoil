@@ -1,0 +1,29 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+  <title>{{content.title}} - Bruno Reis</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+
+  <section id="wrapper">
+    <h1>{{content.title}}</h1>
+  </section>
+
+  <section class="post">
+    <a class="posts__card" data-post="{{content.id}}">
+      <div class="post__iframe-container">
+        <iframe class="post__single-frame" src="https://blog.rocketseat.com.br/{{content.id}}" frameborder="0"></iframe>
+      </div>
+      <div class="posts__content">
+        <h2 class="posts__title">{{content.title}}</h2>
+      </div>
+      <div class="posts__infos">
+        <p class="posts__author">Autor: <span>{{content.author}}</span></p>
+        <p class="posts__time"><i class="material-icons posts__icon">alarm</i> {{content.time}} min de leitura</p>
+      </div>
+    </a>
+  </section>
+  
+{% endblock %}
