@@ -32,7 +32,6 @@ Abaixo os comandos que são usados no projeto:
 
 ### Features:
 - [x] Lista de vídeos e posts dinâmicos;
-- [] CMS para cadastro de conteúdos dinâmicos;
 
 
 ### Status: 

@@ -41,8 +41,6 @@ server.get('/conteudos', function(req, res) {
 server.get('/conteudos/:id', function(req, res) {
   const id = req.params.id
 
-  console.log(id)
-
   const content = data.contents.find(function(content) {
      if(content.id == id) return true
   })
